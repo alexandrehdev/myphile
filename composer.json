@@ -1,0 +1,20 @@
+{
+    "name": "fileapp/myphile",
+    "description": "projeto leitor de arquivo .csv",
+    "type": "project",
+    "require": {
+        "phpoffice/phpspreadsheet": "1.20"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fileapp\\Myphile\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "alexandre",
+            "email": "hallyssonrdev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
