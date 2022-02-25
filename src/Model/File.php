@@ -3,6 +3,9 @@ namespace Fileapp\Myphile\Model;
 use PhpOffice\PhpSpreadsheet\Reader\Csv;
 use Fileapp\Myphile\Controller\File as FileController;
 
+// session_name("xfile");
+// session_start();
+
 class File extends FileController
 {
   public $reader;
@@ -14,8 +17,9 @@ class File extends FileController
   }
 
   public function readFile($file){
-    $this->reader->setInputEncoding('CP1252');
 
+    $spreadsheet = $this->reader->load(__DIR__ . "/files/{$file['name']}");
+    var_dump($spreadsheet);
   }
 }
 
