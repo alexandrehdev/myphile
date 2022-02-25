@@ -1,0 +1,33 @@
+/* mini-header */
+.inner-header{
+  height: 35px;
+  background: var(--secondary-grey);
+  display: flex;
+  justify-content: space-between;
+}
+.inner-header > div{
+  color: var(--main-white);
+  margin:8px;
+}
+
+.main-header{
+  font-family: 'Rubik', sans-serif;
+  color: var(--main-white);
+  margin: 30px;
+}
+
+
+/* estilo campo de arquivo */
+.file-content{
+  display: flex;
+  justify-content: center;
+  /* background-color: red; */
+  height: 440px;
+  margin: 15px;
+}
+
+.sendbutton{
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+}
