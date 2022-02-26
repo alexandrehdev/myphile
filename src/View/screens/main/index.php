@@ -13,6 +13,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/elements.css">
@@ -21,10 +22,12 @@
   <body>
     <div class="inner-header">
       <div class="github-icon">
-        icone github
+        <a href="https://github.com/alexandrehdev" target="_blank">
+          <i class="github icon" class="icon"></i>
+        </a>
       </div>
       <div class="information-creator">
-        link para informação pessoal
+        <i class="info icon" class="icon"></i>
       </div>
     </div>
 

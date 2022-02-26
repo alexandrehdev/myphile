@@ -9,6 +9,21 @@
   color: var(--main-white);
   margin:8px;
 }
+.inner-header .github-icon .icon{
+  margin: -3px;
+  font-size:24px;
+  text-decoration: none;
+  color:white;
+}
+
+.inner-header .information-creator .icon{
+  margin: -3px;
+  font-size:22px;
+  text-decoration: none;
+  color:white;
+  cursor: pointer;
+}
+
 
 .main-header{
   font-family: 'Rubik', sans-serif;
@@ -16,18 +31,22 @@
   margin: 30px;
 }
 
-
-/* estilo campo de arquivo */
-.file-content{
+.field{
   display: flex;
   justify-content: center;
+  margin-top: 220px;
+}
+/* estilo campo de arquivo */
+/* .file-content{ */
+  /* display: flex; */
+  /* justify-content: center; */
   /* background-color: red; */
-  height: 440px;
-  margin: 15px;
-}
+  /* height: 440px; */
+  /* margin: 15px; */
+/* } */
 
-.sendbutton{
-  border: 0;
-  padding: 10px;
-  cursor: pointer;
-}
+/* .sendbutton{ */
+  /* border: 0; */
+  /* padding: 10px; */
+  /* cursor: pointer; */
+/* } */
