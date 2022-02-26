@@ -17,9 +17,8 @@ class File extends FileController
   }
 
   public function readFile($file){
-
     $spreadsheet = $this->reader->load(__DIR__ . "/files/{$file['name']}");
-    var_dump($spreadsheet);
+    return $spreadsheet;
   }
 }
 
