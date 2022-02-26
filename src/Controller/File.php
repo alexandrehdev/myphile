@@ -17,9 +17,23 @@ class File extends GetFile
   public function checkfile(){
     $_SESSION['CURRENT_FILE'] = $this->getFile();
     $response = $this->redirectfile();
-    if ($response == TRUE) {
-      (new FileModel())->readFile($_SESSION['CURRENT_FILE']);
+      if ($response == TRUE) {
+        return (new FileModel())->readFile($_SESSION['CURRENT_FILE']);
     }
+  }
+
+  public function showContentFile($index){
+    $response = $this->checkfile($_SESSION['CURRENT_FILE']);
+    $datafile = array(
+            'firstr' => $response->getActiveSheet()->getCell("A".$index),
+            'secondr' => $response->getActiveSheet()->getCell("B".$index),
+            'thirdr' => $response->getActiveSheet()->getCell("C".$index),
+            'fourthr' => $response->getActiveSheet()->getCell("D".$index),
+            'fifthr' => $response->getActiveSheet()->getCell("E".$index),
+            'sixthr' => $response->getActiveSheet()->getCell("F".$index),
+            'seventhr' => $response->getActiveSheet()->getCell("G".$index)
+         );
+    return $datafile;
   }
 
   public function redirectfile(){
@@ -29,6 +43,8 @@ class File extends GetFile
 
     return TRUE;
   }
+
+
 
 
 }
