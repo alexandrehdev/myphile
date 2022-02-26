@@ -1,0 +1,72 @@
+/* mini-header */
+.inner-header{
+  height: 35px;
+  background: var(--secondary-grey);
+  display: flex;
+  justify-content: space-between;
+}
+.inner-header > div{
+  color: var(--main-white);
+  margin:8px;
+}
+.inner-header .github-icon .icon{
+  margin: -3px;
+  font-size:24px;
+  text-decoration: none;
+  color:white;
+}
+.inner-header .information-creator .icon{
+  margin: -3px;
+  font-size:22px;
+  text-decoration: none;
+  color:white;
+  cursor: pointer;
+}
+
+.main-header{
+  font-family: 'Rubik', sans-serif;
+  color: var(--main-white);
+  margin: 30px;
+}
+
+.field{
+  display: flex;
+  justify-content: center;
+  margin-top: 220px;
+}
+
+/* estilo tabela */
+
+.hidden-table{
+  position: absolute;
+  top: 10%;
+  left:10%;
+  /* transform: translate(35%, -60%); */
+  color: var(--main-white);
+  background: var(--main-purple);
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+.hidden-table th{
+  text-transform: uppercase;
+  padding: 15px;
+}
+.hidden-table tr td{
+  padding: 10px;
+}
+
+/* estilo campo de arquivo */
+/* .file-content{ */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* background-color: red; */
+  /* height: 440px; */
+  /* margin: 15px; */
+/* } */
+
+/* .sendbutton{ */
+  /* border: 0; */
+  /* padding: 10px; */
+  /* cursor: pointer; */
+/* } */
