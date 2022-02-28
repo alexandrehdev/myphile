@@ -10,30 +10,61 @@ class File extends GetFile
 {
   public $file;
 
+  public $rowcount = array(
+    'A'=> 1,
+    'B' => 2,
+    'C' =>
+    'D' =>
+    'E' =>
+    'F' =>
+    'G' =>
+    'H' =>
+    'I' =>
+    'J' =>
+    'K' =>
+    'L' =>
+    'M' =>
+    'N' =>
+    'O' =>
+    'P' =>
+    'Q' =>
+    'R' =>
+    'S' =>
+    'T' =>
+    'U' =>
+    'V' =>
+    'W' =>
+    'X' =>
+    'Y' =>
+    'Z' =>
+  );
+
   function __construct(){
     parent::__construct();
   }
-
+  // verifica o arquivo enviado
   public function checkfile(){
-    $_SESSION['CURRENT_FILE'] = $this->getFile();
-    $response = $this->redirectfile();
-      if ($response == TRUE) {
+    $_SESSION['CURRENT_FILE'] = $this->getFile(); //armazenado o arquivo em sessão
+    $response = $this->redirectfile(); //redireciona o arquivo para pasta files
+      if ($response == TRUE) { //caso tenha dado certo, ele irá retornar true
         return (new FileModel())->readFile($_SESSION['CURRENT_FILE']);
+        //retornando true ele irá retornar o arquivo lido
     }
   }
 
-  public function showContentFile($index){
-    $response = $this->checkfile($_SESSION['CURRENT_FILE']);
-    $datafile = array(
-            'firstr' => $response->getActiveSheet()->getCell("A".$index),
-            'secondr' => $response->getActiveSheet()->getCell("B".$index),
-            'thirdr' => $response->getActiveSheet()->getCell("C".$index),
-            'fourthr' => $response->getActiveSheet()->getCell("D".$index),
-            'fifthr' => $response->getActiveSheet()->getCell("E".$index),
-            'sixthr' => $response->getActiveSheet()->getCell("F".$index),
-            'seventhr' => $response->getActiveSheet()->getCell("G".$index)
-         );
-    return $datafile;
+  public function countingFile(){
+    $response = $this->checkfile($_SESSION['CURRENT_FILE']); //armazenado o valor na variavel
+    return $response->getActiveSheet()->getHighestColumn();
+    // $datafile = array(
+    //         'firstr' => $response->getActiveSheet()->getCell("A".$index),
+    //         'secondr' => $response->getActiveSheet()->getCell("B".$index),
+    //         'thirdr' => $response->getActiveSheet()->getCell("C".$index),
+    //         'fourthr' => $response->getActiveSheet()->getCell("D".$index),
+    //         'fifthr' => $response->getActiveSheet()->getCell("E".$index),
+    //         'sixthr' => $response->getActiveSheet()->getCell("F".$index),
+    //         'seventhr' => $response->getActiveSheet()->getCell("G".$index)
+    //      );
+    // return $datafile;
   }
 
   public function redirectfile(){

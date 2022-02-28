@@ -55,45 +55,8 @@
 
       <div class="hidden-table">
 
-        <table>
-          <tr>
-            <th><?php echo $file->showContentFile(1)["firstr"]; ?></th>
-            <th><?php echo $file->showContentFile(1)["secondr"]; ?></th>
-            <th><?php echo $file->showContentFile(1)["thirdr"]; ?></th>
-            <th><?php echo $file->showContentFile(1)["fourthr"]; ?></th>
-            <th><?php echo $file->showContentFile(1)["fifthr"]; ?></th>
-            <th><?php echo $file->showContentFile(1)["sixthr"]; ?></th>
-            <th><?php echo $file->showContentFile(1)["seventhr"]; ?></th>
-          </tr>
-          <tr>
-            <td><?php echo $file->showContentFile(2)["firstr"]; ?></td>
-            <td><?php echo $file->showContentFile(2)["secondr"]; ?></td>
-            <td><?php echo $file->showContentFile(2)["thirdr"]; ?></td>
-            <td><?php echo $file->showContentFile(2)["fourthr"]; ?></td>
-            <td><?php echo $file->showContentFile(2)["fifthr"]; ?></td>
-            <td><?php echo $file->showContentFile(2)["sixthr"]; ?></td>
-            <td><?php echo $file->showContentFile(2)["seventhr"]; ?></td>
-          </tr>
-          <tr>
-            <td><?php echo $file->showContentFile(3)["firstr"]; ?></td>
-            <td><?php echo $file->showContentFile(3)["secondr"]; ?></td>
-            <td><?php echo $file->showContentFile(3)["thirdr"]; ?></td>
-            <td><?php echo $file->showContentFile(3)["fourthr"]; ?></td>
-            <td><?php echo $file->showContentFile(3)["fifthr"]; ?></td>
-            <td><?php echo $file->showContentFile(3)["sixthr"]; ?></td>
-            <td><?php echo $file->showContentFile(3)["seventhr"]; ?></td>
-          </tr>
+        <?php echo $file->countingFile(); ?>
 
-          <tr>
-            <td><?php echo $file->showContentFile(4)["firstr"]; ?></td>
-            <td><?php echo $file->showContentFile(4)["secondr"]; ?></td>
-            <td><?php echo $file->showContentFile(4)["thirdr"]; ?></td>
-            <td><?php echo $file->showContentFile(4)["fourthr"]; ?></td>
-            <td><?php echo $file->showContentFile(4)["fifthr"]; ?></td>
-            <td><?php echo $file->showContentFile(4)["sixthr"]; ?></td>
-            <td><?php echo $file->showContentFile(4)["seventhr"]; ?></td>
-          </tr>
-        </table>
 
       </div>
 
