@@ -6,7 +6,9 @@
   if ($_SERVER['REQUEST_METHOD'] == "POST") {
     (new GetFile());
     $file = new File();
-    $file->checkfile();
+    $cells = $file->checkfile();
+    $columns = $file->showAllColumns();
+    $row = $file->showRowCount();
   }
  ?>
 <!DOCTYPE html>
@@ -55,8 +57,18 @@
 
       <div class="hidden-table">
 
-        <?php echo $file->countingFile(); ?>
-
+          <table>
+            <tr>
+              <?php
+                foreach ($columns as $key) {
+                  echo "<th>{$key}</th>";
+                }
+               ?>
+            </tr>
+            <tr>
+                
+            </tr>
+          </table>
 
       </div>
 
