@@ -6,9 +6,8 @@
   if ($_SERVER['REQUEST_METHOD'] == "POST") {
     (new GetFile());
     $file = new File();
-    $cells = $file->checkfile();
-    $columns = $file->showAllColumns();
-    $row = $file->showRowCount();
+    $response = $file->checkfile();
+    $total = $file->countingFile();
   }
  ?>
 <!DOCTYPE html>
@@ -43,7 +42,6 @@
     <main>
 
       <div class="file-content">
-
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
           <div class="field">
             <input draggable="true" type="file" name="userfile" id="file">
@@ -52,25 +50,21 @@
             <input type="submit" id="btn" name="btn" value="Enviar" class="sendbutton">
           </div>
         </form>
-
       </div>
-
-      <div class="hidden-table">
-
-          <table>
-            <tr>
-              <?php
-                foreach ($columns as $key) {
-                  echo "<th>{$key}</th>";
-                }
-               ?>
-            </tr>
-            <tr>
-                
-            </tr>
-          </table>
-
-      </div>
+      <table>
+        <tr>
+            <?php for ($i=0; $i <= $total ; $i++) {
+              echo "<th>addsd</th>";
+            }
+            ?>
+        </tr>
+        <tr>
+            <?php for ($i=0; $i <= $total ; $i++) {
+              echo "<td>addsd</td>";
+            }
+            ?>
+        </tr>
+       </table>
 
     </main>
   </body>
