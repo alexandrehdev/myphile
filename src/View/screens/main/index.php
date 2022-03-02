@@ -74,6 +74,17 @@
             }
             ?>
           </tr>
+          <tr>
+              <?php for ($i=0; $i <= $total ; $i++) {
+                $coluna = $file->convertNumber2Letter($i);
+                $valor = $file->showcontentfile($coluna,3);
+
+                // var dump ele retorna o objeto
+                // echo $valor;
+                echo "<td>{$valor}</td>";
+              }
+              ?>
+            </tr>
        </table>
 
     </main>
