@@ -63,7 +63,6 @@
             }
             ?>
         </tr>
-        
         <tr>
             <?php for ($i=0; $i <= $total ; $i++) {
               $coluna = $file->convertNumber2Letter($i);
@@ -74,7 +73,7 @@
               echo "<td>{$valor}</td>";
             }
             ?>
-        </tr>
+          </tr>
        </table>
 
     </main>
