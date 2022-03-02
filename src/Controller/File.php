@@ -52,6 +52,18 @@ class File extends GetFile
     }
   }
 
+  public function convertNumber2Letter(int $number){
+    $tmp = null;
+
+    foreach ($this->rowcount as $key => $value) {
+      if ($number == $key) {
+        $tmp = $value;
+        continue; //não deixa ir ate o fim
+      }
+    }
+    return $tmp;
+  }
+
   public function countingFile(){
     $response = $this->checkfile(); //armazenado o valor na variavel
     $maxcolumn = $response->getActiveSheet()->getHighestColumn();
@@ -61,9 +73,7 @@ class File extends GetFile
 
   public function showcontentfile($letter,$num){
     $response = $this->checkfile();
-    $datafile = array(
-      'column' => $response->getActiveSheet()->getCell("{$letter}".$num)
-    );
+    $datafile = $response->getActiveSheet()->getCell("{$letter}".$num);
     return $datafile;
   }
 

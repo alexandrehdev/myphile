@@ -54,13 +54,24 @@
       <table>
         <tr>
             <?php for ($i=0; $i <= $total ; $i++) {
-              echo "<th>addsd</th>";
+              $coluna = $file->convertNumber2Letter($i);
+              $valor = $file->showcontentfile($coluna,1);
+
+              // var dump ele retorna o objeto
+              // echo $valor;
+              echo "<th>{$valor}</th>";
             }
             ?>
         </tr>
+        
         <tr>
             <?php for ($i=0; $i <= $total ; $i++) {
-              echo "<td>addsd</td>";
+              $coluna = $file->convertNumber2Letter($i);
+              $valor = $file->showcontentfile($coluna,2);
+
+              // var dump ele retorna o objeto
+              // echo $valor;
+              echo "<td>{$valor}</td>";
             }
             ?>
         </tr>
