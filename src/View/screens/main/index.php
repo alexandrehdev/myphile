@@ -44,13 +44,15 @@
       <div class="file-content">
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
           <div class="field">
-            <input draggable="true" type="file" name="userfile" id="file">
+            <label for='selecao-arquivo' id="file-text">Arquivo &#187;</label>
+            <input id='selecao-arquivo' name="userfile" type='file'>
           </div>
           <div class="field">
             <input type="submit" id="btn" name="btn" value="Enviar" class="sendbutton">
           </div>
         </form>
       </div>
+      <div class="table-content">
       <table>
         <tr>
             <?php for ($i=0; $i <= $total ; $i++) {
@@ -67,25 +69,14 @@
             <?php for ($i=0; $i <= $total ; $i++) {
               $coluna = $file->convertNumber2Letter($i);
               $valor = $file->showcontentfile($coluna,2);
-
               // var dump ele retorna o objeto
               // echo $valor;
               echo "<td>{$valor}</td>";
             }
             ?>
           </tr>
-          <tr>
-              <?php for ($i=0; $i <= $total ; $i++) {
-                $coluna = $file->convertNumber2Letter($i);
-                $valor = $file->showcontentfile($coluna,3);
-
-                // var dump ele retorna o objeto
-                // echo $valor;
-                echo "<td>{$valor}</td>";
-              }
-              ?>
-            </tr>
        </table>
+     </div>
 
     </main>
   </body>
