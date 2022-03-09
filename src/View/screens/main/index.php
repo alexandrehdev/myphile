@@ -6,7 +6,7 @@
   if ($_SERVER['REQUEST_METHOD'] == "POST") {
     (new GetFile());
     $file = new File();
-    $response = $file->checkfile();
+    $response = $file->checkFile();
     $total = $file->countingFile();
   }
  ?>
@@ -53,29 +53,17 @@
         </form>
       </div>
       <div class="table-content">
-      <table>
-        <tr>
-            <?php for ($i=0; $i <= $total ; $i++) {
-              $coluna = $file->convertNumber2Letter($i);
-              $valor = $file->showcontentfile($coluna,1);
+        <table>
+            <tr>
+              <?php
+                  for($i = 0;$i <= 10; $i++):
+                    echo $file->number2Letter($i);
+                  endfor;
+              ?>
+            </tr>
+            <tr>
 
-              // var dump ele retorna o objeto
-              // echo $valor;
-              echo "<th>{$valor}</th>";
-            }
-            ?>
-        </tr>
-        <tr>
-            <?php for ($i=0; $i <= $total ; $i++) {
-              $coluna = $file->convertNumber2Letter($i);
-              $valor = $file->showcontentfile($coluna,2);
-              // var dump ele retorna o objeto
-              // echo $valor;
-              echo "<td>{$valor}</td>";
-            }
-            ?>
-          </tr>
-       </table>
+        </table>
      </div>
 
     </main>
