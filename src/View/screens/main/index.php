@@ -56,12 +56,19 @@
         <table>
             <tr>
               <?php
-                  for($i = 0;$i <= 10; $i++):
-                    echo $file->number2Letter($i);
+                  for($i = 1;$i <= $total; $i++):
+                    echo "<th>";
+                      echo  $file->showContentFile($file->number2Letter($i), 1);
+                    echo "</th>";
                   endfor;
               ?>
             </tr>
-            <tr>
+
+              <?php
+                echo $file->showContentFile("B", 2);
+               ?>
+
+
 
         </table>
      </div>
