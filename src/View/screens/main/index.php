@@ -54,25 +54,19 @@
       </div>
       <div class="table-content">
         <table>
-            <tr>
-              <?php
-                  for($i = 1;$i <= $total; $i++):
-                    echo "<th>";
-                      echo  $file->showContentFile($file->number2Letter($i), 1);
-                    echo "</th>";
-                  endfor;
-              ?>
-            </tr>
+            <?php
 
-              <?php
-                echo $file->showContentFile("B", 2);
-               ?>
+              echo "
+                      <tr>
 
+                          . $file->showContentFile("B",2); .
 
+                      </tr>
+                  ";
 
+             ?>
         </table>
      </div>
-
     </main>
   </body>
 </html>
